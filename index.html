@@ -1,11 +1,400 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <meta name="description"
+          content="Segurança digital: utilizando matemática para programar senhas seguras.">
+
+    <title>Segurança Digital | Matemática e Senhas</title>
+
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <header class="hero">
+        <nav class="navbar">
+            <div class="logo">🔐 Math<span>Safe</span></div>
+
+            <div class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#matematica">Matemática</a>
+                <a href="#analisador">Analisador</a>
+                <a href="#gerador">Gerador</a>
+            </div>
+        </nav>
+
+        <div class="hero-content" id="inicio">
+            <div class="hero-text">
+                <p class="tag">SEGURANÇA DIGITAL + MATEMÁTICA</p>
+
+                <h1>
+                    Senhas fortes são
+                    <span>matemática em ação.</span>
+                </h1>
+
+                <p>
+                    Descubra como probabilidade, combinações e
+                    entropia ajudam a criar senhas mais difíceis
+                    de serem descobertas.
+                </p>
+
+                <a href="#analisador" class="button">
+                    Analisar minha senha ↓
+                </a>
+            </div>
+
+            <div class="lock-animation">
+                <div class="lock">🔒</div>
+                <div class="binary">01001001<br>10110110<br>01101010</div>
+            </div>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- MATEMÁTICA -->
+
+        <section class="section" id="matematica">
+
+            <div class="section-title">
+                <p class="tag">COMO FUNCIONA?</p>
+
+                <h2>
+                    A matemática por trás
+                    <span>da segurança</span>
+                </h2>
+
+                <p>
+                    Quanto maior o número de possibilidades para uma senha,
+                    mais difícil é adivinhar sua combinação.
+                </p>
+            </div>
+
+            <div class="cards">
+
+                <article class="card">
+                    <div class="icon">🔢</div>
+
+                    <h3>Combinações</h3>
+
+                    <p>
+                        Se cada posição de uma senha pode receber diferentes
+                        caracteres, o número de combinações cresce rapidamente.
+                    </p>
+
+                    <div class="formula">
+                        N = C<sup>L</sup>
+                    </div>
+
+                    <small>
+                        C = quantidade de caracteres disponíveis<br>
+                        L = tamanho da senha
+                    </small>
+                </article>
+
+
+                <article class="card">
+                    <div class="icon">📊</div>
+
+                    <h3>Entropia</h3>
+
+                    <p>
+                        A entropia mede, em bits, a quantidade de incerteza
+                        presente em uma senha.
+                    </p>
+
+                    <div class="formula">
+                        E = L × log₂(C)
+                    </div>
+
+                    <small>
+                        Quanto maior a entropia, maior a dificuldade
+                        de adivinhar a senha.
+                    </small>
+                </article>
+
+
+                <article class="card">
+                    <div class="icon">🎲</div>
+
+                    <h3>Probabilidade</h3>
+
+                    <p>
+                        Se uma senha possui muitas combinações possíveis,
+                        a chance de acertá-la em uma tentativa diminui.
+                    </p>
+
+                    <div class="formula">
+                        P = 1 / N
+                    </div>
+
+                    <small>
+                        N representa o número total de combinações possíveis.
+                    </small>
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- EXEMPLO MATEMÁTICO -->
+
+        <section class="math-section">
+
+            <div class="math-container">
+
+                <div>
+                    <p class="tag">EXEMPLO</p>
+
+                    <h2>
+                        Por que uma senha maior
+                        pode ser muito mais segura?
+                    </h2>
+
+                    <p>
+                        Imagine uma senha formada apenas por letras minúsculas.
+                        Existem 26 possibilidades para cada posição.
+                    </p>
+
+                    <p>
+                        Uma senha com 4 caracteres teria:
+                    </p>
+
+                    <div class="big-formula">
+                        26⁴ = 456.976
+                    </div>
+
+                    <p>
+                        Já uma senha com 10 caracteres teria:
+                    </p>
+
+                    <div class="big-formula">
+                        26¹⁰ = 141.167.095.653.376
+                    </div>
+                </div>
+
+
+                <div class="comparison">
+
+                    <div class="compare-box weak">
+                        <span>4 caracteres</span>
+                        <strong>456 mil</strong>
+                        <small>possibilidades</small>
+                    </div>
+
+                    <div class="arrow">→</div>
+
+                    <div class="compare-box strong">
+                        <span>10 caracteres</span>
+                        <strong>141 trilhões</strong>
+                        <small>possibilidades</small>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- ANALISADOR -->
+
+        <section class="section analyzer-section" id="analisador">
+
+            <div class="section-title">
+                <p class="tag">FERRAMENTA INTERATIVA</p>
+
+                <h2>
+                    Analise sua <span>senha</span>
+                </h2>
+
+                <p>
+                    Digite uma senha fictícia para descobrir como a matemática
+                    avalia sua complexidade.
+                </p>
+            </div>
+
+
+            <div class="analyzer">
+
+                <label for="password">
+                    Digite uma senha para analisar:
+                </label>
+
+                <div class="password-input">
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Digite uma senha..."
+                        autocomplete="off"
+                    >
+
+                    <button id="togglePassword" type="button">
+                        👁️
+                    </button>
+                </div>
+
+
+                <div class="strength">
+                    <div class="strength-bar">
+                        <div id="strengthFill"></div>
+                    </div>
+
+                    <strong id="strengthText">
+                        Digite uma senha
+                    </strong>
+                </div>
+
+
+                <div class="stats">
+
+                    <div class="stat">
+                        <span>🔤</span>
+                        <small>Caracteres</small>
+                        <strong id="lengthValue">0</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>🧮</span>
+                        <small>Possibilidades</small>
+                        <strong id="combinationsValue">0</strong>
+                    </div>
+
+                    <div class="stat">
+                        <span>📈</span>
+                        <small>Entropia</small>
+                        <strong id="entropyValue">0 bits</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="tips" id="tips">
+                    <h3>💡 Dicas</h3>
+
+                    <ul>
+                        <li>Use pelo menos 12 caracteres.</li>
+                        <li>Combine letras, números e símbolos.</li>
+                        <li>Evite informações pessoais.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- GERADOR -->
+
+        <section class="generator-section" id="gerador">
+
+            <div class="generator">
+
+                <div>
+                    <p class="tag">GERADOR</p>
+
+                    <h2>
+                        Crie uma senha
+                        <span>aleatória</span>
+                    </h2>
+
+                    <p>
+                        Gere uma senha aleatória usando diferentes conjuntos
+                        de caracteres.
+                    </p>
+                </div>
+
+
+                <div class="generator-box">
+
+                    <div class="generated-password" id="generatedPassword">
+                        Clique em gerar
+                    </div>
+
+                    <div class="generator-controls">
+
+                        <label>
+                            Tamanho:
+                            <strong id="sizeValue">16</strong>
+                        </label>
+
+                        <input
+                            type="range"
+                            id="passwordSize"
+                            min="8"
+                            max="32"
+                            value="16"
+                        >
+
+                        <div class="checks">
+
+                            <label>
+                                <input type="checkbox" id="lowercase" checked>
+                                Letras minúsculas
+                            </label>
+
+                            <label>
+                                <input type="checkbox" id="uppercase" checked>
+                                Letras maiúsculas
+                            </label>
+
+                            <label>
+                                <input type="checkbox" id="numbers" checked>
+                                Números
+                            </label>
+
+                            <label>
+                                <input type="checkbox" id="symbols" checked>
+                                Símbolos
+                            </label>
+
+                        </div>
+
+                        <button class="button generate-button" id="generate">
+                            🔑 Gerar senha
+                        </button>
+
+                        <button class="copy-button" id="copy">
+                            📋 Copiar senha
+                        </button>
+
+                        <p id="copyMessage"></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <div class="footer-content">
+
+            <div class="logo">
+                🔐 Math<span>Safe</span>
+            </div>
+
+            <p>
+                Projeto educacional sobre matemática e segurança digital.
+            </p>
+
+            <p class="copyright">
+                © 2026 MathSafe
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
 </body>
 </html>
